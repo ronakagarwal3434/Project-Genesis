@@ -14,40 +14,37 @@
 </head>
 <body>
 
+    
+
     <div class="full-container">
+
         <div class="column column1">
             <div class="box">
                 <h2>Total Supply: <span class="number">50</span></h2>
                 <img src="./1587445374465.png" alt="" width="250px">
                 <h3><span id="suuply1" class="number">XX</span> left</h3>
                 <div class="sub-main">
-                    <button class="button-two"><h4><span>Get</span></h4></button>
+                    <button class="button-two" onclick="get1()" id="get1Btn"><h4><span>Get</span></h4></button>
                 </div>
                 <h1>Owners</h1>
                 <ul id="owner1List" class="list-numbered">
-                    <li>Ronak</li>
-                    <li>Abhinav</li>
-                    <li>Ronak</li>
                 </ul>
             </div> 
         </div>
         
         <div class="column column2">
             <div class="box">
-                <!-- <button onclick="loadWeb3()" id="ConnectMetaMaskBtn">Connect MetaMask</button> -->
-                <!-- <button onclick="disconnectWeb3()" id="DisconnectMetaMaskBtn" style="visibility: hidden;">Disconnect</button> -->
+                <button onclick="loadWeb3()" id="ConnectMetaMaskBtn">Connect MetaMask</button>
+                <button onclick="disconnectWeb3()" id="DisconnectMetaMaskBtn" style="visibility: hidden;">Disconnect</button>
                 <h2>Total Supply: <span class="number">200</span></h2>
                 <video autoplay="" class="AssetMedia--video" controlslist="nodownload" loop="" playsinline=""
                     src="/1a5f14f75fc7551411d32d2e78e90691.mp4" width="250px"></video>
                 <h3><span id="suuply2" class="number">XX </span> left</span></h3>
                 <div class="sub-main">
-                    <button class="button-two"><h4><span>Get</span></h4></button>
+                    <button onclick="get2()" id="get2Btn" class="button-two"><h4><span>Get</span></h4></button>
                 </div>
                 <h1>Owners</h1>
                 <ul id="owner2List" class="list-numbered">
-                    <li>Ronak</li>
-                    <li>Abhinav</li>
-                    <li>Ronak</li>
                 </ul>
             </div>
         </div>
@@ -55,7 +52,7 @@
     <script type="text/javascript">
         if(typeof window.ethereum== 'undefined'){
             var btn=document.getElementById('ConnectMetaMaskBtn')
-            btn.innerHTML="<a href='https://metamask.io/' class='zocial bitcoin' target= _blank>Install MetaMask &nbsp;</a>"
+            btn.innerHTML="<a href='https://metamask.io/' class='zocial bitcoin' target= _blank>Install MetaMask</a>"
         }
         async function loadWeb3(){
             if(window.ethereum){

@@ -4,6 +4,7 @@ body {
 
 h2 {
     font-family: 'Playfair Display', serif;
+    margin-top: 20%;
 }
 
 img,
@@ -23,6 +24,18 @@ video {
 
 span {
     font-family: 'Playfair Display Bold', serif;
+}
+
+#ConnectMetaMaskBtn,
+#DisconnectMetaMaskBtn {
+    position: absolute;
+    font-size: smaller;
+    margin: 1% auto;
+    border-radius: 4px;
+    background-color: #d35400;
+    border: none;
+    padding: 7px;
+    color: black !important;
 }
 
 .number {
@@ -62,7 +75,7 @@ span {
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: black;
 }
 
 
