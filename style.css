@@ -50,7 +50,7 @@ span {
 #DisconnectMetaMaskBtn {
     background-color: transparent;
     border: none;
-    color: rgba(0, 0, 0, 0.8) !important;
+    color: white !important;
 }
 
 /* #ConnectMetaMaskBtn {
