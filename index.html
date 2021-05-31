@@ -116,30 +116,30 @@
             return name
         }
         async function get1(){
-            var loader = document.getElementByClass('hexdots')
-            loader.style.visibility = "visible"
             var name = await getName()
             if(name){
-            console.log(name)
-            const accounts=await window.web3.eth.getAccounts()
-            await window.contract.methods.mint(1,name).send({from:accounts[0]});
-            loadValues()
-            loader.style.visibility = "hidden"
-            window.alert('Done')
-        }
+                var loader = document.getElementByClass('hexdots')
+                loader.style.visibility = "visible"
+                console.log(name)
+                const accounts=await window.web3.eth.getAccounts()
+                await window.contract.methods.mint(1,name).send({from:accounts[0]});
+                loadValues()
+                loader.style.visibility = "hidden"
+                window.alert('Done')
+            }
         }
         async function get2(){
-            var loader = document.getElementByClass('hexdots')
-           loader.style.visibility = "visible"
             var name = await getName()
             if(name){
-            console.log(name)
-            const accounts=await window.web3.eth.getAccounts()
-            await window.contract.methods.mint(2,name).send({from:accounts[0]});
-            loadValues()
-            loader.style.visibility = "hidden"
-            window.alert('Done')
-        }
+                var loader = document.getElementByClass('hexdots')
+                loader.style.visibility = "visible"
+                console.log(name)
+                const accounts=await window.web3.eth.getAccounts()
+                await window.contract.methods.mint(2,name).send({from:accounts[0]});
+                loadValues()
+                loader.style.visibility = "hidden"
+                window.alert('Done')
+            }
         }
         
     </script>
