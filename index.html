@@ -14,6 +14,12 @@
 </head>
 <body>
 
+    <div class="buttons-box">
+        <div>
+            <button onclick="loadWeb3()" id="ConnectMetaMaskBtn">Connect MetaMask</button>
+            <button onclick="disconnectWeb3()" id="DisconnectMetaMaskBtn" style="visibility: hidden;">Disconnect</button>
+        </div>
+    </div>
     
 
     <div class="full-container">
@@ -42,10 +48,9 @@
         
         <div class="column column2">
             <div class="box">
-                <div class="buttons-box">
-                    <button onclick="loadWeb3()" id="ConnectMetaMaskBtn">Connect MetaMask</button>
-                    <button onclick="disconnectWeb3()" id="DisconnectMetaMaskBtn" style="visibility: hidden;">Disconnect</button>
-                </div>
+                <!-- <div class="buttons-box"> -->
+                
+                <!-- </div> -->
                 <h2>Total Supply: <span class="number">200</span></h2>
                 <img src="./1587445374465.png" alt="" width="250px">
                 <!-- <video autoplay="" class="AssetMedia--video" controlslist="nodownload" loop="" playsinline=""
