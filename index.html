@@ -35,26 +35,29 @@
                 <h1>Owners</h1>
                 <ul id="owner1List" class="list-numbered list-numbered-1">
                     <li>Ronak</li>
-                    <li>Ronak</li>
-                    <li>Ronak</li>
-                    <li>Ronak</li>
+                    <li>Abhinav</li>
+                    <li>Traple</li>
+                    <li>Kshitij</li>
                 </ul>
             </div> 
         </div>
 
         <div class="hexdots" style="visibility: hidden;">
             <div class="hexdots-loader"> </div>
+            <h1 class="loading-heading">M I N T I N G</h1>
         </div>
         
         <div class="column column2">
             <div class="box">
-                <!-- <div class="buttons-box"> -->
-                
-                <!-- </div> -->
                 <h2>Total Supply: <span class="number">200</span></h2>
-                <img src="./1587445374465.png" alt="" width="250px">
-                <!-- <video autoplay="" class="AssetMedia--video" controlslist="nodownload" loop="" playsinline=""
-                    src="/1a5f14f75fc7551411d32d2e78e90691.mp4" width="250px"></video> -->
+                <div class="image-upload">
+                    <label for="file-input">
+                        <img id="previewImg" src="https://icon-library.net/images/upload-photo-icon/upload-photo-icon-21.jpg"
+                            style="width: 250px;" />
+                    </label>
+                
+                    <input id="file-input" type="file" onchange="previewFile(this);" style="display: none;" />
+                </div>
                 <h3><span id="suuply2" class="number">XX </span> left</span></h3>
                 <div class="sub-main">
                     <button onclick="get2()" id="get2Btn" class="button-two"><h4><span>Get</span></h4></button>
@@ -69,7 +72,18 @@
             </div>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript">
+        function previewFile(input) {
+                var file = $("input[type=file]").get(0).files[0];
+                if (file) {
+                    var reader = new FileReader();
+                    reader.onload = function () {
+                        $("#previewImg").attr("src", reader.result);
+                    }
+                    reader.readAsDataURL(file);
+                }
+            }
         if(typeof window.ethereum== 'undefined'){
             var btn=document.getElementById('ConnectMetaMaskBtn')
             btn.innerHTML="<a href='https://metamask.io/' class='zocial bitcoin' target= _blank>Install MetaMask</a>"
@@ -141,7 +155,6 @@
                 window.alert('Done')
             }
         }
-        
     </script>
 </body>
 </html>

@@ -1177,6 +1177,7 @@ html {
 
 /* :not(:required) hides this rule from IE9 and below */
 .hexdots-loader:not(:required) {
+    z-index: 1;
     overflow: hidden;
     position: relative;
     display: inline-block;
@@ -1194,4 +1195,40 @@ html {
     -ms-transform-origin: 50% 50%;
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
+}
+
+.image-upload>input {
+    display: none;
+}
+
+label.filebutton {
+    width: 120px;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    background-color: #ccc;
+}
+
+label span input {
+    z-index: 999;
+    line-height: 0;
+    font-size: 50px;
+    position: absolute;
+    top: -2px;
+    left: -700px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-filter: "alpha(opacity=0)";
+    cursor: pointer;
+    _cursor: hand;
+    margin: 0;
+    padding: 0;
+}
+
+.loading-heading {
+    font-size: 350%;
+    position: absolute;
+    z-index: 3;
+    -webkit-text-stroke: 3px black;
+    -webkit-text-fill-color: transparent;
 }
